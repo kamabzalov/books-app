@@ -1,59 +1,58 @@
-# BooksApp
+# 📚 Books Application
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.6.
+Приложение для поиска книг и просмотра информации о них. Реализовано на **Angular 19** с использованием **Angular Material** и **Standalone компонентов**.
 
-## Development server
+## 🚀 Возможности
 
-To start a local development server, run:
+- 🔍 Поиск книг по названию или автору
+- 📄 Просмотр подробной информации о книге
+- 🎨 Библиотека компонентов Angular Material
+- ⚙️ Архитектура с использованием Standalone компонентов
+
+## 🛠️ Технологии
+
+- Angular 19
+- Angular Material
+- Standalone Components
+- RxJS
+- TypeScript
+
+## 🗂️ Структура проекта
+
+- `src/app/components/` — Переиспользуемые UI-компоненты
+- `src/app/components/book-card/` — Компонент карточки книги
+- `src/app/pages/` — Страницы приложения
+- `src/app/pages/home/` — Главная страница с поиском книг
+- `src/app/pages/book-details/` — Страница с деталями книги
+- `src/app/services/` — Сервисы для взаимодействия с API
+- `src/app/services/books.service.ts` — Сервис получения данных о книгах
+- `src/app/models/` — Интерфейсы и типы данных
+- `src/app/models/book.model.ts` — Модель книги
+- `src/app/app.routes.ts` — Конфигурация маршрутов
+- `src/app/app.config.ts` — Конфигурация приложения
+- `src/environments/` — Файлы переменных окружения
+- `src/environments/environment.ts` — Конфигурация окружения (dev)
+- `src/environments/environment.prod.ts` — Конфигурация окружения (prod)
+- `src/assets/` — Статические файлы
+- `src/main.ts` — Точка входа в приложение
+
+## ⚙️ Установка и запуск
 
 ```bash
+# Установка зависимостей
+npm install
+
+# Запуск приложения в режиме разработки
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+# Сборка для продакшена
 ng build
+
+# Запуск линтера
+ng lint
+
+# Запуск prettier
+npm run prettier
+
+
 ```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

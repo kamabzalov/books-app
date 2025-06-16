@@ -9,6 +9,7 @@
         "test": "ng test",
         "lint": "ng lint",
         "lint-fix": "ng lint --fix",
+        "prettier": "prettier --write \"src/**/*.{ts,html,css,scss}\"",
         "prepare": "husky"
     },
     "lint-staged": {
