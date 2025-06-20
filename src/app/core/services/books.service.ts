@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core'
+import { inject, Injectable } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
-import { BehaviorSubject, Observable } from 'rxjs'
+import { BehaviorSubject, map, Observable } from 'rxjs'
 import { Book } from '@app/core/models/book'
 
 @Injectable({
@@ -10,10 +10,22 @@ export class BooksService {
     private readonly api = '/assets/books.json'
 
     private readonly cache = new BehaviorSubject<Book[]>([])
-
-    constructor(private http: HttpClient) {}
+    private readonly http = inject(HttpClient)
 
     public getBooks(searchQuery?: string): Observable<Book[]> {
-        return this.http.get<Book[]>(`${this.api}`)
+        if (!searchQuery) {
+            return this.http.get<Book[]>(`${this.api}`)
+        }
+        return this.http
+            .get<Book[]>(`${this.api}`)
+            .pipe(
+                map((response) =>
+                    response.filter(
+                        (book) =>
+                            book.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                            book.author.toLowerCase().includes(searchQuery.toLowerCase())
+                    )
+                )
+            )
     }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { ChangeDetectionStrategy, Component } from '@angular/core'
 import { MatToolbar } from '@angular/material/toolbar'
 
 @Component({
@@ -6,5 +6,6 @@ import { MatToolbar } from '@angular/material/toolbar'
     imports: [MatToolbar],
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {}

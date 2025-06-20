@@ -8,9 +8,6 @@ export const routes: Routes = [
     },
     {
         path: 'book/:id',
-        loadComponent: () =>
-            import('./features/book/components/book.component').then(
-                (c) => c.BookComponent
-            ),
+        loadComponent: () => import('./features/book/components/book.component').then((c) => c.BookComponent),
     },
 ]

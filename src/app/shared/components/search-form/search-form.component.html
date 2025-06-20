@@ -4,16 +4,11 @@
         [placeholder]="placeholder"
         matInput
         type="text"
-        (input)="changeSearchQuery()"
-        [(ngModel)]="searchQuery"
+        #searchField
+        (input)="changeSearchQuery(searchField.value)"
     />
-    @if (searchQuery) {
-        <button
-            matSuffix
-            mat-icon-button
-            aria-label="Clear"
-            (click)="resetSearchQuery()"
-        >
+    @if (query()) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="resetSearchQuery(searchField)">
             <mat-icon>close</mat-icon>
         </button>
     }

@@ -1,53 +1,31 @@
-import {
-    Component,
-    DestroyRef,
-    EventEmitter,
-    inject,
-    Input,
-    input,
-    OnInit,
-    Output,
-    output,
-} from '@angular/core'
-import {
-    MatFormField,
-    MatInput,
-    MatLabel,
-    MatSuffix,
-} from '@angular/material/input'
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, signal, WritableSignal } from '@angular/core'
+import { MatInput, MatLabel, MatSuffix } from '@angular/material/input'
 import { MatIconButton } from '@angular/material/button'
 import { MatIcon } from '@angular/material/icon'
-import { FormControl, FormsModule } from '@angular/forms'
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
+import { FormsModule } from '@angular/forms'
+import { MatFormFieldModule } from '@angular/material/form-field'
 
 @Component({
     selector: 'books-search-form',
-    imports: [
-        MatSuffix,
-        MatFormField,
-        MatIcon,
-        MatLabel,
-        MatIconButton,
-        MatInput,
-        FormsModule,
-    ],
+    imports: [MatSuffix, MatFormFieldModule, MatIcon, MatLabel, MatIconButton, MatInput, FormsModule],
     host: {
         class: 'columns',
     },
     templateUrl: './search-form.component.html',
     styleUrl: './search-form.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchFormComponent {
     @Input() public placeholder = ''
-    @Input() public searchQuery = ''
+    @Input({ required: true }) query: WritableSignal<string> = signal('')
     @Output() public searchQueryChange = new EventEmitter<string>()
 
-    protected changeSearchQuery() {
-        this.searchQueryChange.emit(this.searchQuery)
+    protected changeSearchQuery(value: string) {
+        this.query.set(value)
     }
 
-    resetSearchQuery() {
-        this.searchQuery = ''
-        this.searchQueryChange.emit('')
+    resetSearchQuery(searchField: HTMLInputElement) {
+        this.query.set('')
+        searchField.value = ''
     }
 }
