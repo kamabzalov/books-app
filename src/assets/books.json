@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "name": "1984",
+        "author": "George Orwell",
+        "description": "Антиутопический роман о тоталитарном будущем, где за всеми следит Большой Брат.",
+        "year": 1949,
+        "genre": "Антиутопия",
+        "rating": 4.9,
+        "language": "English"
+    },
+    {
+        "id": 2,
+        "name": "Преступление и наказание",
+        "author": "Фёдор Достоевский",
+        "description": "История студента, совершившего убийство и переживающего нравственные терзания.",
+        "year": 1866,
+        "genre": "Классика, психология",
+        "rating": 4.8,
+        "language": "Russian"
+    },
+    {
+        "id": 3,
+        "name": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "Рассказ о расовых предрассудках на Юге США глазами маленькой девочки.",
+        "year": 1960,
+        "genre": "Драма",
+        "rating": 4.7,
+        "language": "English"
+    },
+    {
+        "id": 4,
+        "name": "Мастер и Маргарита",
+        "author": "Михаил Булгаков",
+        "description": "Сатирический роман, переплетающий мистику, любовь и религию.",
+        "year": 1967,
+        "genre": "Мистика, сатира",
+        "rating": 4.9,
+        "language": "Russian"
+    },
+    {
+        "id": 5,
+        "name": "Brave New World",
+        "author": "Aldous Huxley",
+        "description": "Фантастическое общество будущего, где все счастливы — и никто не свободен.",
+        "year": 1932,
+        "genre": "Научная фантастика",
+        "rating": 4.6,
+        "language": "English"
+    },
+    {
+        "id": 6,
+        "name": "Война и мир",
+        "author": "Лев Толстой",
+        "description": "Эпопея о судьбах аристократов на фоне наполеоновских войн.",
+        "year": 1869,
+        "genre": "Исторический роман",
+        "rating": 4.9,
+        "language": "Russian"
+    },
+    {
+        "id": 7,
+        "name": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "Трагическая история любви и американской мечты.",
+        "year": 1925,
+        "genre": "Драма",
+        "rating": 4.5,
+        "language": "English"
+    },
+    {
+        "id": 8,
+        "name": "Маленький принц",
+        "author": "Антуан де Сент-Экзюпери",
+        "description": "Философская сказка для взрослых и детей о любви, дружбе и смысле жизни.",
+        "year": 1943,
+        "genre": "Сказка, философия",
+        "rating": 4.8,
+        "language": "French"
+    },
+    {
+        "id": 9,
+        "name": "Fahrenheit 451",
+        "author": "Ray Bradbury",
+        "description": "Будущее, где книги запрещены и сжигаются пожарными.",
+        "year": 1953,
+        "genre": "Антиутопия",
+        "rating": 4.7,
+        "language": "English"
+    },
+    {
+        "id": 10,
+        "name": "Анна Каренина",
+        "author": "Лев Толстой",
+        "description": "История трагической любви на фоне российской аристократии.",
+        "year": 1877,
+        "genre": "Роман",
+        "rating": 4.8,
+        "language": "Russian"
+    },
+    {
+        "id": 11,
+        "name": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "description": "Мальчик-волшебник узнает о своем предназначении и поступает в школу магии.",
+        "year": 1997,
+        "genre": "Фэнтези",
+        "rating": 4.9,
+        "language": "English"
+    },
+    {
+        "id": 12,
+        "name": "Над пропастью во ржи",
+        "author": "Дж. Д. Сэлинджер",
+        "description": "Повесть о юноше, отрицающем общественные нормы.",
+        "year": 1951,
+        "genre": "Роман воспитания",
+        "rating": 4.3,
+        "language": "English"
+    },
+    {
+        "id": 13,
+        "name": "One Hundred Years of Solitude",
+        "author": "Gabriel García Márquez",
+        "description": "История семьи Буэндиа в вымышленном городе Макондо.",
+        "year": 1967,
+        "genre": "Магический реализм",
+        "rating": 4.9,
+        "language": "Spanish"
+    },
+    {
+        "id": 14,
+        "name": "Доктор Живаго",
+        "author": "Борис Пастернак",
+        "description": "История любви и революции в России начала XX века.",
+        "year": 1957,
+        "genre": "Исторический роман",
+        "rating": 4.6,
+        "language": "Russian"
+    },
+    {
+        "id": 15,
+        "name": "The Hobbit",
+        "author": "J.R.R. Tolkien",
+        "description": "Путешествие хоббита Бильбо вместе с гномами и магом.",
+        "year": 1937,
+        "genre": "Фэнтези, приключения",
+        "rating": 4.9,
+        "language": "English"
+    }
+]

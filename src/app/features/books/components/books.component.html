@@ -1,0 +1,20 @@
+<books-search-form
+    [(searchQuery)]="searchQueryString"
+    placeholder="Поиск книг по автору и названию"
+></books-search-form>
+
+@let books = books$ | async;
+
+@if (books?.length) {
+    <mat-list>
+        @for (book of books; track book.id) {
+            <mat-list-item class="mb-4">
+                <p matListItemTitle>
+                    Название:
+                    <a [routerLink]="['book', book.id]">{{ book.name }}</a>
+                </p>
+                <p matListItemLine>Год: {{ book.year }}</p>
+            </mat-list-item>
+        }
+    </mat-list>
+}

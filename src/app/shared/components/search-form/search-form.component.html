@@ -1,0 +1,20 @@
+<mat-form-field appearance="outline" class="column is-half">
+    <mat-label>{{ placeholder }}</mat-label>
+    <input
+        [placeholder]="placeholder"
+        matInput
+        type="text"
+        (input)="changeSearchQuery()"
+        [(ngModel)]="searchQuery"
+    />
+    @if (searchQuery) {
+        <button
+            matSuffix
+            mat-icon-button
+            aria-label="Clear"
+            (click)="resetSearchQuery()"
+        >
+            <mat-icon>close</mat-icon>
+        </button>
+    }
+</mat-form-field>
