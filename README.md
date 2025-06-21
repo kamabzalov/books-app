@@ -26,6 +26,9 @@
 - `src/app/features/book/` — Модуль приложения формы книги
 - `src/app/core/services/` — Сервисы для использования во всем приложения
 - `src/app/сore/models/` — Интерфейсы и типы данных
+- `src/app/сore/resolvers/` — Резолверы
+- `src/app/сore/interceptors/` — Интерсепторы
+- `src/app/сore/utils/` — Утилиты приложения
 - `src/app/app.routes.ts` — Конфигурация маршрутов
 - `src/app/app.config.ts` — Конфигурация приложения
 - `src/assets/` — Статические файлы
