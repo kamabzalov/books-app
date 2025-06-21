@@ -1,0 +1,80 @@
+<h1 class="title is-2">Введите данные новой книги</h1>
+<form [formGroup]="bookForm" (ngSubmit)="saveBook()">
+    <div>
+        <mat-form-field class="column is-half" appearance="outline">
+            <mat-label>Название книги</mat-label>
+            <input matInput placeholder="Название книги" formControlName="name" />
+            @if (bookForm.controls.name.invalid) {
+                <mat-error>Значение поля невалидно</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="column is-half" appearance="outline">
+            <mat-label>Автор</mat-label>
+            <input matInput placeholder="Автор" formControlName="author" />
+            @if (bookForm.controls.author.invalid) {
+                <mat-error>Значение поля невалидно</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="column is-half" appearance="outline">
+            <mat-label>Описание</mat-label>
+            <textarea matInput placeholder="Автор" formControlName="description"></textarea>
+            @if (bookForm.controls.description.invalid) {
+                <mat-error>Значение поля невалидно</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="column is-half" appearance="outline">
+            <mat-label>Автор</mat-label>
+            <input matInput placeholder="Автор" type="number" formControlName="year" />
+            @if (bookForm.controls.year.invalid) {
+                <mat-error>Значение поля невалидно</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="column is-half" appearance="outline">
+            <mat-label>Автор</mat-label>
+            <input matInput placeholder="Автор" formControlName="genre" />
+            @if (bookForm.controls.genre.invalid) {
+                <mat-error>Значение поля невалидно</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="column is-half" appearance="outline">
+            <mat-label>Рейтинг</mat-label>
+            <input matInput placeholder="Автор" type="number" formControlName="rating" />
+            @if (bookForm.controls.rating.invalid) {
+                <mat-error>Значение поля невалидно</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field class="column is-half" appearance="outline">
+            <mat-label>Язык</mat-label>
+            <mat-select formControlName="language">
+                @for (language of languages; track language) {
+                    <mat-option [value]="language">{{ language }}</mat-option>
+                }
+            </mat-select>
+            @if (bookForm.controls.language.invalid) {
+                <mat-error>Значение поля невалидно</mat-error>
+            }
+        </mat-form-field>
+    </div>
+
+    <div>
+        <button [disabled]="bookForm.invalid" mat-flat-button>Сохранить</button>
+    </div>
+</form>

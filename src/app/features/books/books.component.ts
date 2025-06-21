@@ -23,13 +23,13 @@ export class BooksComponent implements OnInit {
 
     private booksService = inject(BooksService)
     private loadingService = inject(LoadingService)
-    protected isLoading = this.loadingService.isLoading
+    protected isLoading = signal(false)
 
     public ngOnInit() {
         this.books$ = this.searchString.pipe(
             tap(() => this.isLoading.set(true)),
             debounceTime(500),
-            finalize(() => this.isLoading.set(false)),
+            finalize(() => this.loadingService.isLoading.set(false)),
             switchMap((query) => this.booksService.getBooks(query))
         )
     }
