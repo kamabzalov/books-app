@@ -4,7 +4,7 @@ import { BooksService } from '@app/core/services/books.service'
 import { map, Observable, of } from 'rxjs'
 import { Book } from '@app/core/models/book'
 
-export const bookResolver: ResolveFn<Book | null> = (route, state): Observable<Book | null> => {
+export const bookResolver: ResolveFn<Book | null> = (route): Observable<Book | null> => {
     const booksService = inject(BooksService)
     const router = inject(Router)
     const id = route.paramMap.get('id')

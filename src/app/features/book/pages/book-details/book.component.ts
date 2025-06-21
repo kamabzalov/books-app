@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
 import { Book } from '@app/core/models/book'
-import { MatCard, MatCardModule } from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card'
 
 @Component({
     selector: 'books-book',
