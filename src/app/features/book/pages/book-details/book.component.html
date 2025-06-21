@@ -1,1 +1,13 @@
-<p>book works!</p>
+@if (book) {
+    <mat-card appearance="outlined">
+        <mat-card-header>
+            <mat-card-title>Название:{{ book.name }}</mat-card-title>
+            <mat-card-subtitle>Автор:{{ book.author }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Жанр: {{ book.genre }}</p>
+            <p>Год: {{ book.year }}</p>
+            <p>Описание:{{ book.description }}</p>
+        </mat-card-content>
+    </mat-card>
+}

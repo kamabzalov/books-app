@@ -54,4 +54,18 @@ export class BooksService {
         this.cache.next(cacheValue)
         return of(newBook)
     }
+
+    getBookById(bookId: number): Observable<Book | null> {
+        const books = this.cache.getValue()
+        if (books.length) {
+            const book = books.find((elem) => elem.id === bookId)
+            return book ? of(book) : of(null)
+        } else {
+            return this.http.get<Book[]>(`${this.api}`).pipe(
+                map((response) => {
+                    return response.find((elem) => elem.id === bookId) ?? null
+                })
+            )
+        }
+    }
 }

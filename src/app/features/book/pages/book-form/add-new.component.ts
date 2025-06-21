@@ -11,6 +11,7 @@ import { BooksService } from '@app/core/services/books.service'
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
 import { Router } from '@angular/router'
 import { MatSnackBar } from '@angular/material/snack-bar'
+import xssValidator from '@app/shared/validators/xss.validator'
 
 @Component({
     selector: 'books-add-new',
@@ -41,7 +42,7 @@ export class AddNewComponent implements OnInit {
             }),
             description: new FormControl<string>('', {
                 nonNullable: true,
-                validators: [Validators.required, isEmptyValueValidator(), Validators.maxLength(250)],
+                validators: [Validators.required, isEmptyValueValidator(), xssValidator(), Validators.maxLength(250)],
             }),
             year: new FormControl<number>(new Date().getFullYear(), {
                 nonNullable: true,
